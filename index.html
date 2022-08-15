@@ -41,9 +41,13 @@
     .page-layout {
       display: grid;
       height: 750px;
+      place-items: center;
+      justify-content: center;
       /* grid-template: 50% 50% / 100%; */
+      /* grid-template-rows: 10% 40% 40% 10%;
+      grid-template-columns: 10% 40% 40% 10%; */
       grid-template-rows: 10% 40% 40% 10%;
-      grid-template-columns: 10% 40% 40% 10%;
+      grid-template-columns: 150px 550px 550px 150px;
     }
 
     .about {
@@ -51,12 +55,14 @@
       grid-row: 2;
       display: flex;
       flex-direction: column;
+      padding-left: 1em;
     }
 
     .about__header {
       padding-right: 50%;
       font-size: 25px;
       color: hsl(300, 43%, 22%);
+      font-weight: 700;
     }
 
     .about__details {
@@ -79,6 +85,11 @@
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: repeat(4, 25%);
+      padding-right: 1em;
+    }
+
+    .ratings__card__stars {
+      padding: 1.5em 2em;
     }
 
     .ratings__container1 {
@@ -110,18 +121,21 @@
 
     .ratings__card {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       width: 400px;
       border-radius: 12px;
       background-color: hsl(300, 24%, 96%);
+      color: hsl(300, 43%, 22%);
+      font-weight: 700;
+      /* padding-left: 3em; */
     }
 
     .user-card {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      width: 350px;
+      width: 330px;
       border-radius: 12px;
       color: white;
       background-color: hsl(300, 43%, 22%);
@@ -136,6 +150,7 @@
       flex-direction: column;
       vertical-align: bottom;
       padding-left: 1em;
+      font-weight: 500;
     }
 
     .user-card__buyer-info__pfp {
@@ -152,6 +167,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
+      padding-right: 1em;
     }
 
     .user-card__container2 {
@@ -160,6 +176,7 @@
       align-items: center;
       flex-direction: column;
       padding-top: 1em;
+      padding-right: 1em;
     }
 
     .user-card__container3 {
@@ -188,16 +205,37 @@
       <div class="ratings">
         <div class="ratings__container1">
           <div class="ratings__card">
+            <div class="ratings__card__stars">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+            </div>
             <p>Rated 5 stars in review</p>
           </div>
         </div>
         <div class="ratings__container2">
           <div class="ratings__card">
+            <div class="ratings__card__stars">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+            </div>
             <p>Rated 5 stars in review</p>
           </div>
         </div>
         <div class="ratings__container3">
           <div class="ratings__card">
+            <div class="ratings__card__stars">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+              <img src="./images/icon-star.svg">
+            </div>
             <p>Rated 5 stars in review</p>
           </div>
         </div>
@@ -207,11 +245,11 @@
           <div class="user-card">
             <div class="user-card__buyer-info">
               <div class="user-card__buyer-info__pfp">
-                <img style="border-radius: 25px;" src="/images/image-colton.jpg" width="32" height="32">
+                <img style="border-radius: 25px;" src="./images/image-colton.jpg" width="32" height="32">
               </div>
               <div class="user-card__buyer-info__name">
                 <p>Colton Smith</p>
-                <p>Verified Buyer</p>
+                <p style="color: hsl(333, 80%, 67%)">Verified Buyer</p>
               </div>
             </div>
             <div class="user-card__buyer__quote">
@@ -227,11 +265,11 @@
           <div class="user-card">
             <div class="user-card__buyer-info">
               <div class="user-card__buyer-info__pfp">
-                <img style="border-radius: 25px;" src="/images/image-irene.jpg" width="32" height="32">
+                <img style="border-radius: 25px;" src="./images/image-irene.jpg" width="32" height="32">
               </div>
               <div class="user-card__buyer-info__name">
                 <p>Irene Roberts</p>
-                <p>Verified Buyer</p>
+                <p style="color: hsl(333, 80%, 67%)">Verified Buyer</p>
               </div>
             </div>
             <div class="user-card__buyer__quote">
@@ -246,11 +284,11 @@
           <div class="user-card">
             <div class="user-card__buyer-info">
               <div class="user-card__buyer-info__pfp">
-                <img style="border-radius: 25px;" src="/images/image-anne.jpg" width="32" height="32">
+                <img style="border-radius: 25px;" src="./images/image-anne.jpg" width="32" height="32">
               </div>
               <div class="user-card__buyer-info__name">
                 <p>Anne Wallace</p>
-                <p>Verified Buyer</p>
+                <p style="color: hsl(333, 80%, 67%)">Verified Buyer</p>
               </div>
             </div>
             <div class="user-card__buyer__quote">
