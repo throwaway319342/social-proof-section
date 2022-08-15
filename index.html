@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Social proof section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    :root {
+      box-sizing: border-box;
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page-container {
+      /* max-width: 1080px; */
+      /* height: 100px; */
+    }
+
+    .page-layout {
+      display: grid;
+      height: 750px;
+      /* grid-template: 50% 50% / 100%; */
+      grid-template-rows: 10% 40% 40% 10%;
+      grid-template-columns: 10% 40% 40% 10%;
+    }
+
+    .about {
+      grid-column: 2;
+      grid-row: 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about__header {
+      padding-right: 50%;
+      font-size: 25px;
+      color: hsl(300, 43%, 22%);
+    }
+
+    .about__details {
+      padding-right: 3em;
+      padding-top: 2em;
+      padding-right: 30%;
+      color: hsl(300, 43%, 22%);
+    }
+
+    .clients {
+      grid-column: 2 / 4;
+      grid-row: 3;
+      display: grid;
+      grid-template-columns: calc(1/3) calc(1/3) calc(1/3);
+    }
+
+    .ratings {
+      grid-column: 3;
+      grid-row: 2;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4, 25%);
+    }
+
+    .ratings__container1 {
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 1em;
+      padding-right: 6em;
+      /* padding: 2em 0em; */
+    }
+
+    .ratings__container2 {
+      grid-row: 2;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 1em;
+      padding-right: 3em;
+      /* padding: 2em 0em; */
+    }
+
+    .ratings__container3 {
+      grid-row: 3;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 1em;
+      /* padding: 2em 0em; */
+    }
+
+    .ratings__card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 400px;
+      border-radius: 12px;
+      background-color: hsl(300, 24%, 96%);
+    }
+
+    .user-card {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 350px;
+      border-radius: 12px;
+      color: white;
+      background-color: hsl(300, 43%, 22%);
+    }
+
+    .user-card__buyer-info {
+      padding: 2em 2em;
+    }
+
+    .user-card__buyer-info__name {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: bottom;
+      padding-left: 1em;
+    }
+
+    .user-card__buyer-info__pfp {
+      display: inline-block;
+    }
+
+    .user-card__buyer__quote {
+      padding: 0em 2em;
+      padding-bottom: 2em;
+    }
+
+    .user-card__container1 {
+      grid-column: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .user-card__container2 {
+      grid-column: 2;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 1em;
+    }
+
+    .user-card__container3 {
+      grid-column: 3;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 2em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-container">
+    <div class="page-layout">
+      <div class="about">
+        <div class="about__header">
+          <h2>10,000 of our users love our product!</h2>
+        </div>
+        <div class="about__details">
+          <p>We only provide great products combined with excellent customer service.
+            See what our satisfied customers are saying about our services.</p>
+        </div>
+      </div>
+      <div class="ratings">
+        <div class="ratings__container1">
+          <div class="ratings__card">
+            <p>Rated 5 stars in review</p>
+          </div>
+        </div>
+        <div class="ratings__container2">
+          <div class="ratings__card">
+            <p>Rated 5 stars in review</p>
+          </div>
+        </div>
+        <div class="ratings__container3">
+          <div class="ratings__card">
+            <p>Rated 5 stars in review</p>
+          </div>
+        </div>
+      </div>
+      <div class="clients">
+        <div class="user-card__container1">
+          <div class="user-card">
+            <div class="user-card__buyer-info">
+              <div class="user-card__buyer-info__pfp">
+                <img style="border-radius: 25px;" src="/images/image-colton.jpg" width="32" height="32">
+              </div>
+              <div class="user-card__buyer-info__name">
+                <p>Colton Smith</p>
+                <p>Verified Buyer</p>
+              </div>
+            </div>
+            <div class="user-card__buyer__quote">
+              <p>
+                "We needed the same printed design as the one we had ordered a week prior.
+                Not only did they find the original order, but we also received it in time.
+                Excellent!"
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="user-card__container2">
+          <div class="user-card">
+            <div class="user-card__buyer-info">
+              <div class="user-card__buyer-info__pfp">
+                <img style="border-radius: 25px;" src="/images/image-irene.jpg" width="32" height="32">
+              </div>
+              <div class="user-card__buyer-info__name">
+                <p>Irene Roberts</p>
+                <p>Verified Buyer</p>
+              </div>
+            </div>
+            <div class="user-card__buyer__quote">
+              <p>
+                "Customer service is always excellent and very quick turn around. Completely
+                delighted with the simplicity of the purchase and the speed of delivery."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="user-card__container3">
+          <div class="user-card">
+            <div class="user-card__buyer-info">
+              <div class="user-card__buyer-info__pfp">
+                <img style="border-radius: 25px;" src="/images/image-anne.jpg" width="32" height="32">
+              </div>
+              <div class="user-card__buyer-info__name">
+                <p>Anne Wallace</p>
+                <p>Verified Buyer</p>
+              </div>
+            </div>
+            <div class="user-card__buyer__quote">
+              <p>
+                "Put an order with this company and can only praise them for the very high
+                standard. Will definitely use them again and recommend them to everyone!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10,000+ of our users love our products.
+
+    We only provide great products combined with excellent customer service.
+    See what our satisfied customers are saying about our services.
+    
+    Rated 5 Stars in Reviews
+    Rated 5 Stars in Report Guru
+    Rated 5 Stars in BestTech
+    
+    Colton Smith 
+    Verified Buyer
+    "We needed the same printed design as the one we had ordered a week prior.
+    Not only did they find the original order, but we also received it in time.
+    Excellent!"
+    
+    Irene Roberts 
+    Verified Buyer
+    "Customer service is always excellent and very quick turn around. Completely
+    delighted with the simplicity of the purchase and the speed of delivery."
+    
+    Anne Wallace 
+    Verified Buyer
+    "Put an order with this company and can only praise them for the very high
+    standard. Will definitely use them again and recommend them to everyone!" -->
+
+</body>
+
+</html>
